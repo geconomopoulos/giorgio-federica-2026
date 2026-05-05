@@ -1596,6 +1596,16 @@ footer{
 
   var mapCard = document.getElementById('map-card');
   var activeId = null;
+  var mapHideTimer;
+
+  // When mouse enters the card itself, cancel the hide timer
+  mapCard.addEventListener('mouseenter', function() {
+    clearTimeout(mapHideTimer);
+  });
+  // When mouse leaves the card, hide after short delay
+  mapCard.addEventListener('mouseleave', function() {
+    mapHideTimer = setTimeout(hideMapCard, 120);
+  });
 
   function showMapCard(id, targetEl) {
     var d = mapData[id];
@@ -1642,8 +1652,14 @@ footer{
         showMapCard(g.id, g);
       });
     } else {
-      g.addEventListener('mouseenter', function() { showMapCard(g.id, g); });
-      g.addEventListener('mouseleave', function() { hideMapCard(); });
+      g.addEventListener('mouseenter', function() {
+        clearTimeout(mapHideTimer);
+        showMapCard(g.id, g);
+      });
+      g.addEventListener('mouseleave', function() {
+        // Short delay so mouse can travel to the card without it disappearing
+        mapHideTimer = setTimeout(hideMapCard, 220);
+      });
     }
     // Keyboard
     g.addEventListener('keydown', function(e) {
