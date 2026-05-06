@@ -678,41 +678,23 @@ footer{
   .auguri-submit{width:100%}
 }
 
-/* Active nav link */
-.nav-links a.active { color: var(--terra) !important; }
-/* Page mini-hero for inner pages */
-.page-hero {
-  background: var(--dark);
-  padding: 120px 64px 64px;
-  text-align: center;
-}
-.page-hero .eyebrow { color: var(--terra); opacity:.7; display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:16px; }
-.page-hero .eyebrow::before,.page-hero .eyebrow::after { content:''; width:20px; height:1px; background:var(--terra); opacity:.5; }
-.page-hero-title {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
-  font-size: clamp(36px, 5vw, 64px); color: #fff; line-height: 1.1;
-}
-/* Photo gallery section */
-.foto-wrap { background: var(--dark); padding: 100px 64px; text-align: center; }
-.foto-eyebrow { font-size:9px; letter-spacing:.24em; text-transform:uppercase; color:var(--terra); margin-bottom:16px; opacity:.7; display:flex; align-items:center; justify-content:center; gap:14px; }
-.foto-eyebrow::before,.foto-eyebrow::after { content:''; width:20px; height:1px; background:var(--terra); opacity:.5; }
-.foto-title { font-family:var(--serif); font-weight:300; font-style:italic; font-size:clamp(26px,3.5vw,48px); color:#fff; line-height:1.15; margin-bottom:16px; }
-.foto-body { font-size:14px; line-height:1.88; color:rgba(255,255,255,.4); max-width:460px; margin:0 auto 36px; }
-.foto-btn {
-  display:inline-flex; align-items:center; gap:12px;
-  padding:16px 34px; min-height:54px;
-  border:1px solid rgba(255,255,255,.18);
-  color:rgba(255,255,255,.75); font-size:10px; letter-spacing:.18em;
-  text-transform:uppercase; text-decoration:none; font-weight:400;
-  transition:border-color .25s,color .25s,background .25s;
-}
-.foto-btn:hover { border-color:var(--terra); color:var(--terra); background:rgba(176,120,88,.06); }
-.foto-btn svg { width:18px; height:18px; flex-shrink:0; }
-.foto-note { margin-top:20px; font-family:var(--serif); font-style:italic; font-size:13px; color:rgba(255,255,255,.2); }
-@media(max-width:680px) {
-  .page-hero { padding:100px 24px 52px; }
-  .foto-wrap { padding:72px 24px; }
-}
+
+.nav-links a.active{color:var(--terra)!important}
+.page-hero{background:var(--dark);padding:120px 64px 64px;text-align:center}
+.page-hero .eyebrow{color:var(--terra);opacity:.7;display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:16px}
+.page-hero .eyebrow::before,.page-hero .eyebrow::after{content:'';width:20px;height:1px;background:var(--terra);opacity:.5}
+.page-hero-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(36px,5vw,64px);color:#fff;line-height:1.1}
+.foto-wrap{background:var(--dark);padding:100px 64px;text-align:center}
+.foto-eyebrow{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;opacity:.7;display:flex;align-items:center;justify-content:center;gap:14px}
+.foto-eyebrow::before,.foto-eyebrow::after{content:'';width:20px;height:1px;background:var(--terra);opacity:.5}
+.foto-title{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(26px,3.5vw,48px);color:#fff;line-height:1.15;margin-bottom:16px}
+.foto-body{font-size:14px;line-height:1.88;color:rgba(255,255,255,.4);max-width:460px;margin:0 auto 36px}
+.foto-btn{display:inline-flex;align-items:center;gap:12px;padding:16px 34px;min-height:54px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);font-size:10px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:400;transition:border-color .25s,color .25s,background .25s}
+.foto-btn:hover{border-color:var(--terra);color:var(--terra);background:rgba(176,120,88,.06)}
+.foto-btn svg{width:18px;height:18px;flex-shrink:0}
+.foto-note{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(255,255,255,.2)}
+@media(max-width:680px){.page-hero{padding:100px 24px 52px}.foto-wrap{padding:72px 24px}}
+
 </style>
 </head>
 <body>
@@ -737,8 +719,7 @@ footer{
 <div class="page-hero">
   <p class="eyebrow">5 settembre 2026</p>
   <h1 class="page-hero-title">Il giorno</h1>
-</div>
-<!-- IL GIORNO -->
+</div><!-- IL GIORNO -->
 <section class="giorno-wrap" id="giorno">
   <div class="wide">
     <div class="reveal">
@@ -806,26 +787,16 @@ footer{
 <section class="foto-wrap" id="foto">
   <p class="foto-eyebrow">Le nostre foto</p>
   <h2 class="foto-title">Un album che cresce.</h2>
-  <p class="foto-body">
-    Qui troverete le foto del matrimonio, della Grecia e di tutto quello che sta succedendo nel frattempo.
-    Dopo il 5 settembre aggiungeremo anche quelle del giorno.
-  </p>
-  <!-- GOOGLE PHOTOS LINK — sostituisci href se cambia il link -->
-  <a class="foto-btn"
-     href="https://photos.app.goo.gl/WSxukHmZjGFPLbSJ6"
-     target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor" opacity="0"/>
-      <path d="M21 15.5A9.5 9.5 0 1 1 2.5 12 9.5 9.5 0 0 1 21 15.5z" stroke="currentColor" stroke-width="0"/>
-      <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.6"/>
-      <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M5.64 5.64l2.83 2.83M15.54 15.54l2.83 2.83M5.64 18.36l2.83-2.83M15.54 8.46l2.83-2.83" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <p class="foto-body">Qui trovate le foto del matrimonio, della Grecia e di tutto quello che sta succedendo nel frattempo. Dopo il 5 settembre aggiungeremo anche quelle del giorno.</p>
+  <a class="foto-btn" href="https://photos.app.goo.gl/WSxukHmZjGFPLbSJ6" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
     </svg>
-    Apri l'album
+    Apri l'album su Google Foto
   </a>
   <p class="foto-note">Le foto si aggiornano man mano — tornate a trovarci.</p>
 </section>
-
 <!-- INFORMAZIONI -->
 <section class="info-wrap" id="info">
   <div class="wide">
@@ -855,114 +826,12 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+
 <footer>
   <p class="ft-names">Giorgio &amp; Federica</p>
   <p class="ft-date">05 · 09 · 2026 &nbsp;·&nbsp; Petrochori, Messinia</p>
   <p class="ft-greek">Κάθε μεγάλη ιστορία αρχίζει κάπου.</p>
 </footer>
-
-<script>
-(function(){
-  // Countdown
-  function tick(){
-    var t = new Date('2026-09-05T16:15:00+03:00') - new Date();
-    if(t <= 0){
-      document.querySelector('.countdown').innerHTML =
-        '<p style="font-family:var(--serif);font-style:italic;font-size:22px;color:rgba(255,255,255,.5)">Oggi è il giorno.</p>';
-      return;
-    }
-    function p(n){return String(Math.floor(n)).padStart(2,'0')}
-    document.getElementById('cd-d').textContent = p(t/86400000);
-    document.getElementById('cd-h').textContent = p(t%86400000/3600000);
-    document.getElementById('cd-m').textContent = p(t%3600000/60000);
-    document.getElementById('cd-s').textContent = p(t%60000/1000);
-  }
-  tick(); setInterval(tick, 1000);
-
-  // Nav scroll state
-  var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function(){
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, {passive:true});
-
-  // Reveal on scroll
-  var reveals = document.querySelectorAll('.reveal');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  },{threshold:.12});
-  reveals.forEach(function(el){ io.observe(el); });
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      var el = document.querySelector(a.getAttribute('href'));
-      if(el){ e.preventDefault(); var y = el.getBoundingClientRect().top + window.scrollY - 56; window.scrollTo({top:y,behavior:'smooth'}); }
-    });
-  });
-
-  // ── GUESTBOOK FORM ──────────────────────────────────────────────────────
-  var augForm = document.getElementById('auguri-form');
-  if (augForm) {
-    augForm.addEventListener('submit', function(e) {
-      // If Formspree ID not replaced yet, prevent default and show note
-      if (augForm.action.indexOf('REPLACE_ME') !== -1) {
-        e.preventDefault();
-        document.getElementById('auguri-success').textContent =
-          'Il form non è ancora attivo — configura Formspree per ricevere i messaggi.';
-        document.getElementById('auguri-success').style.display = 'block';
-        return;
-      }
-      // Otherwise let Formspree handle it, show success on return
-      // For AJAX submission:
-      e.preventDefault();
-      var data = new FormData(augForm);
-      fetch(augForm.action, { method:'POST', body:data, headers:{'Accept':'application/json'} })
-        .then(function(r){
-          if(r.ok){
-            augForm.style.display = 'none';
-            document.getElementById('auguri-success').style.display = 'block';
-          } else {
-            alert('Qualcosa non ha funzionato. Riprova o scrivici direttamente.');
-          }
-        })
-        .catch(function(){
-          alert('Errore di rete. Riprova più tardi.');
-        });
-    });
-  }
-
-  // ── METEO (PLACEHOLDER / OPTIONAL LIVE) ─────────────────────────────────
-  // The wedding is on 2026-09-05. Weather is only meaningful close to the date.
-  // Uncomment and configure the block below to enable live weather via OpenWeatherMap.
-  //
-  // TO ENABLE:
-  // 1. Get free API key at https://openweathermap.org/api
-  // 2. Replace YOUR_API_KEY below
-  // 3. Uncomment the fetch block
-  //
-  // var OWM_KEY = 'YOUR_API_KEY';  // <-- insert here
-  // var weddingDay = new Date('2026-09-05');
-  // var today = new Date();
-  // var daysAway = (weddingDay - today) / 86400000;
-  // if (daysAway < 7) {
-  //   fetch('https://api.openweathermap.org/data/2.5/weather?lat=37.00&lon=21.65&appid=' + OWM_KEY + '&units=metric&lang=it')
-  //     .then(function(r){ return r.json(); })
-  //     .then(function(data){
-  //       var temp = Math.round(data.main.temp);
-  //       var desc = data.weather[0].description;
-  //       document.getElementById('meteo-value').innerHTML =
-  //         '<strong>' + temp + '°C</strong> — ' + desc;
-  //       document.getElementById('meteo-date').textContent =
-  //         'Petrochori, aggiornato ora';
-  //     })
-  //     .catch(function(){ /* fail silently */ });
-  // }
-
-})();
-</script>
 <script>
  section (search for METEO JS)
      The API call uses:
