@@ -695,6 +695,51 @@ footer{
 .foto-note{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(255,255,255,.2)}
 @media(max-width:680px){.page-hero{padding:100px 24px 52px}.foto-wrap{padding:72px 24px}}
 
+
+/* ── HAMBURGER + DRAWER ─────────────────────────────────────── */
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:6px;margin:0}
+.nav-burger span{display:block;width:22px;height:1.5px;
+  background:rgba(255,255,255,.8);transition:background .3s,transform .3s,opacity .3s}
+nav.scrolled .nav-burger span{background:var(--dark)}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.nav-drawer{display:none;position:fixed;top:58px;left:0;right:0;z-index:490;
+  background:rgba(246,241,233,.98);backdrop-filter:blur(14px);
+  border-bottom:1px solid #D5C8B8;padding:20px 28px 24px;
+  flex-direction:column;gap:0}
+.nav-drawer.open{display:flex}
+.nav-drawer a{font-size:12px;font-weight:400;letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;color:var(--muted);
+  padding:12px 0;border-bottom:1px solid #EDE6D6;transition:color .2s}
+.nav-drawer a:last-child{border-bottom:none}
+.nav-drawer a:hover{color:var(--terra)}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+}
+
+/* ── REVEAL FIX: CSS animation as fallback ──────────────────── */
+.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+/* On inner pages (no hero), make content visible immediately */
+.page-hero ~ section .reveal,
+.page-hero ~ section .reveal-delay-1,
+.page-hero ~ section .reveal-delay-2,
+.page-hero ~ section .reveal-delay-3{
+  animation:revealIn .65s ease forwards}
+@keyframes revealIn{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:none}
+}
+.page-hero ~ section .reveal-delay-1{animation-delay:.1s}
+.page-hero ~ section .reveal-delay-2{animation-delay:.2s}
+.page-hero ~ section .reveal-delay-3{animation-delay:.3s}
+
 </style>
 </head>
 <body>
