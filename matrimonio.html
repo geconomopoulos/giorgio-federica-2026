@@ -707,13 +707,14 @@ nav.scrolled .nav-burger span{background:var(--dark)}
 .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
 .nav-drawer{display:none;position:fixed;top:58px;left:0;right:0;z-index:490;
-  background:rgba(246,241,233,.98);backdrop-filter:blur(14px);
-  border-bottom:1px solid #D5C8B8;padding:20px 28px 24px;
-  flex-direction:column;gap:0}
+  background:rgba(246,241,233,.99);backdrop-filter:blur(14px);
+  border-bottom:1px solid #D5C8B8;padding:12px 32px 20px;
+  flex-direction:column;gap:0;box-shadow:0 8px 24px rgba(26,22,16,.08)}
 .nav-drawer.open{display:flex}
 .nav-drawer a{font-size:12px;font-weight:400;letter-spacing:.14em;
   text-transform:uppercase;text-decoration:none;color:var(--muted);
-  padding:12px 0;border-bottom:1px solid #EDE6D6;transition:color .2s}
+  padding:18px 0;border-bottom:1px solid #EDE6D6;transition:color .2s;
+  display:block;width:100%}
 .nav-drawer a:last-child{border-bottom:none}
 .nav-drawer a:hover{color:var(--terra)}
 
@@ -884,8 +885,9 @@ nav.scrolled .nav-burger span{background:var(--dark)}
   // Countdown
   function tick(){
     var t = new Date('2026-09-05T16:15:00+03:00') - new Date();
+    var cdEl=document.querySelector('.countdown');
     if(t <= 0){
-      document.querySelector('.countdown').innerHTML =
+      if(cdEl) cdEl.innerHTML =
         '<p style="font-family:var(--serif);font-style:italic;font-size:22px;color:rgba(255,255,255,.5)">Oggi è il giorno.</p>';
       return;
     }
@@ -980,6 +982,10 @@ nav.scrolled .nav-burger span{background:var(--dark)}
 
 })();
   // Hamburger menu
+  // Inner pages: nav always in scrolled state
+  var navEl=document.getElementById('nav');
+  if(navEl) navEl.classList.add('scrolled');
+
   var burger=document.getElementById('nav-burger');
   var drawer=document.getElementById('nav-drawer');
   if(burger&&drawer){
