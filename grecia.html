@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giorgio &amp; Federica — Giorgio &amp; Federica 05.09.2026</title>
+<title>La Grecia — Giorgio &amp; Federica 05.09.2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -719,10 +719,10 @@ footer{
 <nav id="nav">
   <a class="nav-logo" href="./index.html">Giorgio &amp; Federica</a>
   <ul class="nav-links">
-    <li><a href="./index.html" class="active">Home</a></li>
+    <li><a href="./index.html" >Home</a></li>
     <li><a href="./matrimonio.html" >Il giorno</a></li>
     <li><a href="./viaggiare.html" >Viaggiare</a></li>
-    <li><a href="./grecia.html" >La Grecia</a></li>
+    <li><a href="./grecia.html" class="active">La Grecia</a></li>
   </ul>
   <button class="nav-burger" id="nav-burger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -734,201 +734,113 @@ footer{
   <a href="./viaggiare.html">Viaggiare</a>
   <a href="./grecia.html">La Grecia</a>
 </nav>
-<!-- HERO -->
-<div class="hero" id="top">
-  <div class="hero-bg">
-    <img src="images/hero-family.jpg" alt="Giorgio, Federica, Thomas e Sara">
-  </div>
-  <div class="hero-content">
-    <div class="hero-names">
-      Giorgio
-      <span class="amp">&amp;</span>
-      Federica
-    </div>
-    <div class="hero-meta">
-      <span class="hero-date">5 settembre 2026</span>
-      <span class="hero-place">Petrochori &nbsp;·&nbsp; Messinia &nbsp;·&nbsp; Grecia</span>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    scorri
-  </div>
+<div class="page-hero">
+  <p class="eyebrow">Petrochori · Messinia</p>
+  <h1 class="page-hero-title">La Grecia</h1>
 </div>
+<!-- DINTORNI -->
+<section class="dintorni-wrap" id="dintorni">
+  <div class="wide">
+    <div class="reveal">
+      <p class="eyebrow">Nei dintorni</p>
+      <h2 class="sec-title">Se vi fermate qualche giorno</h2>
+      <p class="body-t" style="max-width:500px">Questi sono alcuni posti che secondo noi meritano — spiagge, storia e buon cibo.</p>
+    </div>
 
-<!-- COUNTDOWN -->
-<div class="countdown">
-  <div class="cd-item"><span class="cd-n" id="cd-d">—</span><span class="cd-l">Giorni</span></div>
-  <div class="cd-item"><span class="cd-n" id="cd-h">—</span><span class="cd-l">Ore</span></div>
-  <div class="cd-item"><span class="cd-n" id="cd-m">—</span><span class="cd-l">Minuti</span></div>
-  <div class="cd-item"><span class="cd-n" id="cd-s">—</span><span class="cd-l">Secondi</span></div>
-</div>
+        <div class="dintorni-grid reveal reveal-delay-2">
+      <div class="d-card">
+        <p class="d-num">01</p>
+        <p class="d-title">Voidokilia</p>
+        <p class="d-body">Considerata una delle spiagge più belle della Grecia. Ha la forma di un'omega perfetta — sabbia bianca fine, acque basse e color smeraldo, una laguna protetta alle spalle. Si raggiunge solo a piedi, circa 15 minuti dal parcheggio, il che la tiene lontana dalla folla. Vale ogni passo. A meno di 10 minuti da Petrochori.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Voidokilia+Beach,Messinia,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+      <div class="d-card">
+        <p class="d-num">02</p>
+        <p class="d-title">Pylos &amp; Niokastro</p>
+        <p class="d-body">Il borgo si affaccia sulla Baia di Navarino. Il castello veneziano è poco visitato e vale la passeggiata.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Niokastro,Pylos,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+      <div class="d-card">
+        <p class="d-num">03</p>
+        <p class="d-title">Palazzo di Nestore</p>
+        <p class="d-body">Sito miceneo del 1300 a.C., tra i meglio conservati in Grecia. A circa 20 minuti. Chiuso il martedì.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Nestor,Pylos,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+      <div class="d-card">
+        <p class="d-num">04</p>
+        <p class="d-title">Methoni</p>
+        <p class="d-body">Un piccolo borgo medievale affacciato sul Mar Ionio, dominato da una delle fortezze veneziane più imponenti del Mediterraneo. Il castello si allunga sul mare su un promontorio — si entra dal ponte, si cammina tra torri e bastioni, e ci si ritrova con il mare da tutti i lati. Il paese è tranquillo, con qualche buona taverna sul porto. Vale una mezza giornata.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Methoni+Castle,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+      <div class="d-card">
+        <p class="d-num">05</p>
+        <p class="d-title">Antica Messene</p>
+        <p class="d-body">Antica Messene è una delle visite più sorprendenti del Peloponneso: teatro, stadio, templi, mura imponenti e un’atmosfera sospesa.
+
+È un sito archeologico ancora poco affollato, dove si può camminare tra resti ben conservati senza essere&nbsp; troppo turistico. Lo stadio, in particolare, è scenografico e inatteso; il teatro e l’area sacra restituiscono l’idea di una città antica viva, complessa, quasi intatta nella sua struttura.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Ancient+Messene,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+      <div class="d-card">
+        <p class="d-num">06</p>
+        <p class="d-title">Finikounda</p>
+        <p class="d-body">Un piccolo villaggio di pescatori a circa 20 minuti da Petrochori, con una delle spiagge più belle della zona — lunga, sabbiosa, con acque calme e poco profonde. È rimasto abbastanza autentico: qualche taverna sul lungomare, barche ormeggiate, un ritmo lento. Perfetto per un pomeriggio senza programma.</p>
+        <div class="d-actions">
+          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Finikounda,Greece" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
+            Indicazioni
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<!-- METEO ─────────────────────────────────────────────────────────────────
-     Weather widget for Petrochori on the wedding day.
-     Currently shows an elegant placeholder.
-
-     TO ENABLE LIVE WEATHER (optional):
-     1. Get a free API key at https://openweathermap.org/api
-     2. Replace REPLACE_OWM_API_KEY below with your key
-     3. Uncomment the fetch block in the <script> section (search for METEO JS)
-     The API call uses:
-       https://api.openweathermap.org/data/2.5/weather
-         ?lat=37.00&lon=21.65&appid=YOUR_KEY&units=metric&lang=it
+<!-- PLAYLIST ───────────────────────────────────────────────────────────────
+     TO UPDATE: replace the href in .playlist-btn with your Spotify playlist URL.
+     Current placeholder: https://open.spotify.com/
 ────────────────────────────────────────────────────────────────────────── -->
-<div class="meteo-wrap" id="meteo">
-  <div class="meteo-inner">
-    <svg class="meteo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.5"/>
-      <path d="M24 6v4M24 38v4M6 24h4M38 24h4M11.5 11.5l2.8 2.8M33.7 33.7l2.8 2.8M11.5 36.5l2.8-2.8M33.7 14.3l2.8-2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<section class="playlist-wrap" id="playlist">
+  <p class="playlist-eyebrow">La musica</p>
+  <h2 class="playlist-title">Una piccola colonna sonora del viaggio.</h2>
+  <p class="playlist-body">
+    Se vuoi, puoi anche suggerirci una canzone — scrivici su WhatsApp o
+    lasciacela negli auguri qui sotto.
+  </p>
+  <!-- SPOTIFY LINK — sostituisci href con il link alla tua playlist -->
+  <a class="playlist-btn"
+     href="https://open.spotify.com/"
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36a.75.75 0 0 1-1.03.24c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 0 1-.34-1.46c4.57-1.05 8.49-.6 11.68 1.35a.75.75 0 0 1 .24 1.03zm1.24-2.76a.94.94 0 0 1-1.29.31C13.47 12 9.38 11.5 6.1 12.47a.94.94 0 0 1-.55-1.8c3.73-1.14 8.36-.58 11.64 1.63a.94.94 0 0 1 .69 0zm.11-2.87c-3.37-2-8.93-2.18-12.15-1.21a1.12 1.12 0 1 1-.65-2.15c3.7-1.12 9.85-.91 13.73 1.39a1.12 1.12 0 0 1-1.12 1.94l.19-.0z"/>
     </svg>
-    <div class="meteo-text">
-      <p class="meteo-label">Meteo · Petrochori, Messinia</p>
-      <p class="meteo-value" id="meteo-value">
-        Il meteo del giorno comparirà qui il <strong>5 settembre 2026</strong>.
-      </p>
-      <p class="meteo-date" id="meteo-date">Settembre in Messinia è tipicamente soleggiato, caldo, con brezze marine dal tardo pomeriggio.</p>
-    </div>
-  </div>
-</div>
-
-<!-- LA STORIA -->
-<section class="storia-wrap" id="storia">
-  <div class="wide">
-    <div class="reveal">
-      <p class="eyebrow">La nostra storia</p>
-      <h2 class="sec-title">Come ci siamo arrivati</h2>
-    </div>
-    <div class="storia-grid">
-      <div class="storia-text">
-        <div class="body-t reveal reveal-delay-1">
-          <p>Ci sono due versioni di come è iniziata.</p>
-          <p>In quella più romantica ci siamo incontrati per caso, ci siamo guardati, ed è successo tutto da sé.</p>
-          <p>In quella vera è andata un po' diversamente: ci è voluto tempo. Qualche dubbio, molte risate, qualche giro largo. Poi, abbastanza semplicemente, abbiamo capito che insieme stavamo meglio.</p>
-        </div>
-        <blockquote class="storia-quote reveal reveal-delay-2">
-          Ci sposiamo in Grecia perché è un posto che per noi ha senso. Ci piace la luce, il mare, il modo in cui tutto sembra diventare più semplice.
-        </blockquote>
-        <div class="body-t reveal reveal-delay-3">
-          <p>Il 5 settembre 2026 saremo tra gli ulivi, con il mare sullo sfondo, insieme alle persone a cui vogliamo bene. Poi mangeremo, brinderemo e faremo festa, senza troppe formalità.</p>
-        </div>
-      </div>
-      <div class="storia-photo reveal reveal-delay-1">
-        <img src="images/storia-papaveri.jpg" alt="Giorgio e Federica nel campo di papaveri">
-        <p class="storia-photo-caption">Con Thomas, 2021</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO STRIP -->
-<div class="strip-wrap">
-  <div class="strip-grid">
-    <div class="strip-item">
-      <img src="images/strip-muro.jpg" alt="Giorgio e Federica" style="object-fit: contain">
-      <div class="strip-item-caption">Al muro, Grecia</div>
-    </div>
-    <div class="strip-item">
-      <img src="images/strip-urlo.jpg" alt="Giorgio e Sara" style="object-fit: contain">
-      <div class="strip-item-caption">Giorgio &amp; Sara</div>
-    </div>
-  </div>
-</div>
-
-<!-- CONTATTI / WHATSAPP -->
-<section class="contatti-wrap" id="contatti">
-  <div class="wide">
-    <div class="reveal">
-      <p class="eyebrow">Per qualsiasi domanda</p>
-      <h2 class="sec-title">Scriveteci su WhatsApp</h2>
-      <p class="body-t" style="max-width:560px">Per qualsiasi cosa — un dubbio, un'idea, una conferma — scriveteci direttamente. Risponderemo appena possibile.</p>
-    </div>
-    <div class="contatti-grid">
-      <a class="c-card reveal reveal-delay-1" href="https://wa.me/393408909599?text=Ciao%20Giorgio!%20Ti%20scrivo%20dal%20vostro%20sito%20del%20matrimonio." target="_blank" rel="noopener">
-        <div class="c-avatar">G</div>
-        <div class="c-info">
-          <p class="c-name">Giorgio</p>
-          <p class="c-role">Sposo</p>
-          <p class="c-num">+39 340 890 9599</p>
-        </div>
-        <div class="c-wa" aria-label="Apri WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.85 7.85 0 0 0 12 4a7.93 7.93 0 0 0-6.84 11.92L4 20l4.2-1.1A7.92 7.92 0 0 0 12 19.86h.01A7.93 7.93 0 0 0 19.93 12a7.86 7.86 0 0 0-2.33-5.7zm-5.6 12.2a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25A6.59 6.59 0 1 1 12 18.5zm3.62-4.93c-.2-.1-1.18-.58-1.36-.65-.18-.07-.31-.1-.45.1-.13.2-.51.65-.63.78-.11.13-.23.15-.43.05a5.4 5.4 0 0 1-1.6-.99 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.09.2-.23.3-.34l.2-.34a.37.37 0 0 0 0-.35c-.05-.1-.45-1.08-.62-1.48-.16-.39-.32-.34-.45-.34l-.38-.01a.74.74 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66c0 .98.71 1.92.81 2.05.1.13 1.4 2.13 3.4 2.99.47.2.85.32 1.14.41.48.15.91.13 1.26.08.38-.06 1.18-.48 1.35-.95.17-.46.17-.86.12-.95-.05-.08-.18-.13-.38-.23z"></path></svg>
-        </div>
-      </a>
-      <a class="c-card reveal reveal-delay-2" href="https://wa.me/393337898921?text=Ciao%20Federica!%20Ti%20scrivo%20dal%20vostro%20sito%20del%20matrimonio." target="_blank" rel="noopener">
-        <div class="c-avatar">F</div>
-        <div class="c-info">
-          <p class="c-name">Federica</p>
-          <p class="c-role">Sposa</p>
-          <p class="c-num">+39 333 789 8921</p>
-        </div>
-        <div class="c-wa" aria-label="Apri WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.85 7.85 0 0 0 12 4a7.93 7.93 0 0 0-6.84 11.92L4 20l4.2-1.1A7.92 7.92 0 0 0 12 19.86h.01A7.93 7.93 0 0 0 19.93 12a7.86 7.86 0 0 0-2.33-5.7zm-5.6 12.2a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25A6.59 6.59 0 1 1 12 18.5zm3.62-4.93c-.2-.1-1.18-.58-1.36-.65-.18-.07-.31-.1-.45.1-.13.2-.51.65-.63.78-.11.13-.23.15-.43.05a5.4 5.4 0 0 1-1.6-.99 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.09.2-.23.3-.34l.2-.34a.37.37 0 0 0 0-.35c-.05-.1-.45-1.08-.62-1.48-.16-.39-.32-.34-.45-.34l-.38-.01a.74.74 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66c0 .98.71 1.92.81 2.05.1.13 1.4 2.13 3.4 2.99.47.2.85.32 1.14.41.48.15.91.13 1.26.08.38-.06 1.18-.48 1.35-.95.17-.46.17-.86.12-.95-.05-.08-.18-.13-.38-.23z"></path></svg>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- GUESTBOOK ──────────────────────────────────────────────────────────────
-     Uses Formspree for message delivery. No backend required.
-     TO ACTIVATE:
-     1. Create a free account at https://formspree.io
-     2. Create a new form and copy your endpoint ID
-     3. Replace REPLACE_ME in the form action below
-        Example: action="https://formspree.io/f/xpzgwkvb"
-     Messages are emailed to you only — not shown publicly on the site.
-────────────────────────────────────────────────────────────────────────── -->
-<section class="auguri-wrap" id="auguri">
-  <div class="auguri-inner">
-    <div class="reveal">
-      <p class="eyebrow">Libro degli auguri</p>
-      <h2 class="sec-title">Se ti va, lasciaci<br>un pensiero.</h2>
-      <p class="body-t" style="margin-top:-8px">Prima di partire per la Grecia, puoi lasciarci un messaggio qui. Lo leggeremo con piacere.</p>
-    </div>
-
-    <!-- FORMSPREE: sostituisci REPLACE_ME con il tuo ID form -->
-    <form class="auguri-form reveal reveal-delay-1"
-          action="https://formspree.io/f/mkoybjjv"
-          method="POST"
-          id="auguri-form">
-
-      <div class="auguri-field">
-        <label class="auguri-label" for="auguri-nome">Il tuo nome</label>
-        <input class="auguri-input" type="text" id="auguri-nome"
-               name="nome" placeholder="Come ti chiami?" required>
-      </div>
-
-      <div class="auguri-field">
-        <label class="auguri-label" for="auguri-msg">Il tuo messaggio</label>
-        <textarea class="auguri-textarea" id="auguri-msg"
-                  name="messaggio" placeholder="Scrivi quello che vuoi…" required></textarea>
-      </div>
-
-      <!-- Email: opzionale, discreta -->
-      <div class="auguri-field" style="opacity:.6">
-        <label class="auguri-label" for="auguri-email">Email (facoltativa)</label>
-        <input class="auguri-input" type="email" id="auguri-email"
-               name="email" placeholder="Solo se vuoi che ti rispondiamo">
-      </div>
-
-      <!-- Honeypot anti-spam -->
-      <input type="text" name="_gotcha" style="display:none">
-      <input type="hidden" name="_subject" value="Nuovo messaggio dal libro degli auguri — Giorgio &amp; Federica">
-
-      <button class="auguri-submit" type="submit">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-          <path d="M1 8L14 2L11 8L14 14L1 8Z" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-        </svg>
-        Invia il messaggio
-      </button>
-    </form>
-
-    <p class="auguri-success" id="auguri-success">
-      Grazie — lo leggeremo con tutto il piacere del mondo.
-    </p>
-  </div>
+    Apri la playlist
+  </a>
 </section>
 
 <!-- FOOTER -->
