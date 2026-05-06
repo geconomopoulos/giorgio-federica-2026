@@ -666,75 +666,6 @@ footer{
   .meteo-value{font-size:15px}
 }
 
-/* ── SVG ILLUSTRATED MAP ── */
-.mapviz-wrap{background:var(--cream);padding:96px 0 0}
-.mapviz-inner{max-width:1120px;margin:0 auto;padding:0 64px}
-.mapviz-container{
-  position:relative;
-  margin-top:48px;
-  overflow:hidden;
-}
-.mapviz-scroll{
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.mapviz-svg{
-  display:block;
-  width:100%;
-  min-width:560px;
-  max-width:900px;
-  margin:0 auto;
-  cursor:default;
-}
-/* Tooltip card */
-.map-card{
-  display:none;
-  position:absolute;
-  z-index:50;
-  width:220px;
-  background:#fff;
-  border:1px solid var(--sand);
-  padding:18px 20px;
-  pointer-events:none;
-  box-shadow:0 8px 32px rgba(28,24,19,.12);
-}
-.map-card.active{display:block}
-.map-card-name{
-  font-family:var(--serif);font-size:17px;font-style:italic;
-  font-weight:300;color:var(--dark);margin-bottom:6px;line-height:1.2;
-}
-.map-card-dist{
-  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:10px;font-weight:400;
-}
-.map-card-desc{
-  font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:14px;
-}
-.map-card-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:9px;letter-spacing:.16em;text-transform:uppercase;
-  text-decoration:none;color:#fff;background:var(--blue);
-  padding:8px 14px;pointer-events:all;
-  transition:background .2s;
-}
-.map-card-btn:hover{background:var(--dark)}
-.map-card-btn svg{width:10px;height:10px;flex-shrink:0}
-/* POI dots */
-.poi-dot{cursor:pointer;transition:transform .2s}
-.poi-dot:hover circle,.poi-dot:focus circle,.poi-dot.active circle{
-  fill:var(--terra);r:7;
-}
-.poi-dot circle{transition:fill .2s,r .2s}
-/* Wedding star */
-.poi-star{cursor:default}
-
-@media(max-width:680px){
-  .mapviz-inner{padding:0 20px}
-  .map-card{width:180px;padding:14px 16px}
-  .map-card-name{font-size:15px}
-  .map-card-desc{font-size:12px}
-}
-
 /* ── PLAYLIST ── */
 .playlist-wrap{
   background:var(--dark);
@@ -1018,239 +949,7 @@ footer{
       <p class="body-t" style="max-width:500px">Questi sono alcuni posti che secondo noi meritano — spiagge, storia e buon cibo.</p>
     </div>
 
-    <!-- MAPPA ILLUSTRATA ────────────────────────────────────────────────────
-         SVG map of Messinia. Dots are clickable/tappable.
-         On desktop: hover shows card. On mobile: tap toggles card.
-         Google Maps links use /search/ format (not /dir/) as requested.
-    ─────────────────────────────────────────────────────────────────────── -->
-    <div class="mapviz-container reveal reveal-delay-1" style="margin-top:52px">
-      <div class="mapviz-scroll">
-        <svg class="mapviz-svg" viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg"
-             role="img" aria-label="Mappa illustrata della Messinia">
-
-          <!-- SEA -->
-          <rect width="860" height="560" fill="#B8CDD8" rx="2"/>
-
-          <!-- LAND MASS — simplified coastline of western Messinia -->
-          <!-- Main peninsula shape, approximate but geographically coherent -->
-          <path d="
-            M0,0 L860,0 L860,560 L0,560 Z
-          " fill="#B8CDD8"/>
-
-          <!-- Land fill — main Messinia landmass -->
-          <path d="
-            M0,0
-            L860,0
-            L860,140
-            C820,135 780,125 740,118
-            C720,90 700,70 670,60
-            C640,50 590,55 560,68
-            C520,85 490,75 460,55
-            C430,35 400,20 360,18
-            C320,16 280,25 240,40
-            C200,55 170,65 140,72
-            C110,80 80,85 50,90
-            C30,94 10,96 0,98
-            Z
-          " fill="#EDE7DA" opacity="0"/>
-
-          <!-- Simplified land polygon — whole map background is land,
-               we carve out sea shapes -->
-          <!-- Sea: Ionian/Mediterranean to the south-west -->
-          <!-- Land background -->
-          <path d="
-            M-10,-10
-            L870,-10
-            L870,570
-            L-10,570
-            Z
-          " fill="#EDE7DA"/>
-
-          <!-- Messenian Gulf (right side) — sea inlet -->
-          <path d="
-            M860,0 L860,560 L580,560
-            C600,500 620,440 640,380
-            C650,340 660,290 660,240
-            C660,200 650,170 630,150
-            C610,130 590,120 570,118
-            C550,116 530,120 510,128
-            L530,80 L600,40 L700,10 L860,0 Z
-          " fill="#B8CDD8"/>
-
-          <!-- Western sea (Ionian) — left and bottom -->
-          <path d="
-            M0,560 L0,320
-            C20,330 35,340 45,355
-            C55,370 58,390 55,415
-            C52,440 45,460 50,490
-            C55,520 70,545 80,560 Z
-          " fill="#B8CDD8"/>
-
-          <!-- Bay of Navarino — iconic enclosed bay near Pylos -->
-          <ellipse cx="178" cy="430" rx="28" ry="22" fill="#B8CDD8" opacity="0.7"/>
-
-          <!-- Sea texture — subtle horizontal lines -->
-          <g opacity="0.08" stroke="#3E6880" stroke-width="0.8">
-            <path d="M560,100 Q640,120 720,110 Q790,100 860,115"/>
-            <path d="M570,160 Q650,178 730,168 Q800,158 860,175"/>
-            <path d="M590,220 Q660,238 730,228 Q800,218 860,235"/>
-            <path d="M600,280 Q670,295 740,285 Q810,275 860,292"/>
-            <path d="M610,340 Q680,355 750,345 Q820,335 860,352"/>
-            <path d="M620,400 Q700,415 770,405 Q830,395 860,412"/>
-            <path d="M0,480 Q40,470 80,480 Q100,488 110,500"/>
-            <path d="M0,420 Q30,412 58,424"/>
-          </g>
-
-          <!-- Roads — thin lines connecting key locations -->
-          <g stroke="#C4A882" stroke-width="1.2" fill="none" opacity="0.5" stroke-dasharray="4,3">
-            <!-- Petrochori to Pylos -->
-            <path d="M135,310 Q160,360 185,422"/>
-            <!-- Petrochori to Palace of Nestor -->
-            <path d="M135,310 L200,298"/>
-            <!-- Pylos to Methoni -->
-            <path d="M185,422 Q195,480 212,533"/>
-            <!-- Methoni to Finikounda -->
-            <path d="M212,533 Q270,535 330,520"/>
-            <!-- Petrochori area to Ancient Messene -->
-            <path d="M145,305 Q280,200 463,87"/>
-            <!-- Ancient Messene to Kalamata -->
-            <path d="M463,87 Q550,100 635,223"/>
-            <!-- Voidokilia near Petrochori -->
-            <path d="M119,285 L135,310"/>
-          </g>
-
-          <!-- Olive tree motifs — small scattered decorations -->
-          <g fill="#8A9E6A" opacity="0.4">
-            <!-- Small olive tree symbols near Petrochori -->
-            <ellipse cx="100" cy="295" rx="5" ry="7"/>
-            <rect x="99" y="302" width="2" height="5" fill="#6B5A3E"/>
-            <ellipse cx="88" cy="310" rx="4" ry="6"/>
-            <rect x="87" y="316" width="2" height="4" fill="#6B5A3E"/>
-            <ellipse cx="115" cy="275" rx="4" ry="6"/>
-            <rect x="114" y="281" width="2" height="4" fill="#6B5A3E"/>
-            <!-- Near Voidokilia -->
-            <ellipse cx="95" cy="270" rx="4" ry="5"/>
-            <rect x="94" y="275" width="2" height="4" fill="#6B5A3E"/>
-            <!-- Inland area -->
-            <ellipse cx="350" cy="200" rx="4" ry="6"/>
-            <rect x="349" y="206" width="2" height="4" fill="#6B5A3E"/>
-            <ellipse cx="370" cy="185" rx="4" ry="5"/>
-            <rect x="369" y="190" width="2" height="4" fill="#6B5A3E"/>
-            <ellipse cx="340" cy="165" rx="3" ry="5"/>
-            <rect x="339" y="170" width="2" height="3" fill="#6B5A3E"/>
-          </g>
-
-          <!-- Coastline outline stroke -->
-          <path d="
-            M0,0 L860,0 L860,560 L0,560 Z
-          " fill="none" stroke="#B8CDD8" stroke-width="0"/>
-
-          <!-- Mountain suggestion near Ancient Messene -->
-          <path d="M420,140 L463,87 L506,140 Z" fill="#C8BCA8" opacity="0.35"/>
-          <path d="M440,140 L468,100 L496,140 Z" fill="#D0C4B0" opacity="0.25"/>
-
-          <!-- ── POINTS OF INTEREST ── -->
-          <!-- Each .poi-dot group: circle + label -->
-          <!-- Coordinates based on real lat/lon projected to 860×560 viewBox:
-               x = (lon-21.55)/0.65*860  |  y = (37.25-lat)/0.50*560
-               Bounding box: lon 21.55–22.20 E, lat 36.75–37.25 N  -->
-
-          <!-- Petrochori / Romanos — WEDDING LOCATION (special marker) -->
-          <g class="poi-star" id="poi-wedding">
-            <circle cx="135" cy="308" r="14" fill="rgba(196,149,122,0.15)" stroke="#C4957A" stroke-width="1" stroke-dasharray="3,2"/>
-            <circle cx="135" cy="308" r="5" fill="#C4957A"/>
-            <!-- Star rays -->
-            <g stroke="#C4957A" stroke-width="1.2" stroke-linecap="round">
-              <line x1="135" y1="297" x2="135" y2="292"/>
-              <line x1="135" y1="319" x2="135" y2="324"/>
-              <line x1="124" y1="308" x2="119" y2="308"/>
-              <line x1="146" y1="308" x2="151" y2="308"/>
-              <line x1="127" y1="300" x2="123" y2="296"/>
-              <line x1="143" y1="316" x2="147" y2="320"/>
-              <line x1="127" y1="316" x2="123" y2="320"/>
-              <line x1="143" y1="300" x2="147" y2="296"/>
-            </g>
-            <text x="152" y="305" font-family="Georgia,serif" font-style="italic" font-size="11" fill="#1C1813" font-weight="300">Petrochori</text>
-            <text x="152" y="318" font-family="Georgia,serif" font-style="italic" font-size="9" fill="#C4957A" font-weight="300">5 settembre 2026</text>
-          </g>
-
-          <!-- Voidokilia -->
-          <g class="poi-dot" id="poi-voidokilia" tabindex="0" role="button" aria-label="Voidokilia">
-            <circle cx="114" cy="282" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="76" y="272" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Voidokilia</text>
-          </g>
-
-          <!-- Romanos -->
-          <g class="poi-dot" id="poi-romanos" tabindex="0" role="button" aria-label="Romanos">
-            <circle cx="158" cy="268" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="166" y="266" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Romanos</text>
-          </g>
-
-          <!-- Palace of Nestor -->
-          <g class="poi-dot" id="poi-nestor" tabindex="0" role="button" aria-label="Palazzo di Nestore">
-            <circle cx="198" cy="296" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="206" y="294" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Palazzo di Nestore</text>
-          </g>
-
-          <!-- Pylos / Niokastro -->
-          <g class="poi-dot" id="poi-pylos" tabindex="0" role="button" aria-label="Pylos">
-            <circle cx="185" cy="420" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="193" y="418" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Pylos</text>
-          </g>
-
-          <!-- Methoni -->
-          <g class="poi-dot" id="poi-methoni" tabindex="0" role="button" aria-label="Methoni">
-            <circle cx="212" cy="533" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="220" y="531" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Methoni</text>
-          </g>
-
-          <!-- Finikounda -->
-          <g class="poi-dot" id="poi-finikounda" tabindex="0" role="button" aria-label="Finikounda">
-            <circle cx="331" cy="518" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="339" y="516" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Finikounda</text>
-          </g>
-
-          <!-- Ancient Messene -->
-          <g class="poi-dot" id="poi-messene" tabindex="0" role="button" aria-label="Antica Messene">
-            <circle cx="463" cy="87" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="471" y="85" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Antica Messene</text>
-          </g>
-
-          <!-- Kalamata -->
-          <g class="poi-dot" id="poi-kalamata" tabindex="0" role="button" aria-label="Kalamata">
-            <circle cx="635" cy="221" r="5" fill="#3E6880" stroke="#fff" stroke-width="1.5"/>
-            <text x="643" y="219" font-family="Georgia,serif" font-style="italic" font-size="10" fill="#1C1813">Kalamata ✈</text>
-          </g>
-
-          <!-- Compass rose -->
-          <g transform="translate(810,50)" opacity="0.3">
-            <circle r="16" fill="none" stroke="#1C1813" stroke-width="0.8"/>
-            <path d="M0,-14 L3,-4 L0,-7 L-3,-4 Z" fill="#1C1813"/>
-            <path d="M0,14 L3,4 L0,7 L-3,4 Z" fill="#C4957A" opacity="0.6"/>
-            <path d="M-14,0 L-4,-3 L-7,0 L-4,3 Z" fill="#1C1813" opacity="0.5"/>
-            <path d="M14,0 L4,-3 L7,0 L4,3 Z" fill="#1C1813" opacity="0.5"/>
-            <text y="-18" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1C1813">N</text>
-          </g>
-
-          <!-- Scale note -->
-          <text x="24" y="548" font-family="Georgia,serif" font-style="italic" font-size="9" fill="#1C1813" opacity="0.3">Messinia, Peloponneso</text>
-
-        </svg>
-      </div>
-
-      <!-- Floating tooltip card — repositioned by JS -->
-      <div class="map-card" id="map-card">
-        <p class="map-card-name" id="mc-name"></p>
-        <p class="map-card-dist" id="mc-dist"></p>
-        <p class="map-card-desc" id="mc-desc"></p>
-        <a class="map-card-btn" id="mc-link" href="#" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"/></svg>
-          Apri su Google Maps
-        </a>
-      </div>
-    </div>
-
-    <div class="dintorni-grid reveal reveal-delay-2">
+        <div class="dintorni-grid reveal reveal-delay-2">
       <div class="d-card">
         <p class="d-num">01</p>
         <p class="d-title">Voidokilia</p>
@@ -1271,10 +970,6 @@ footer{
             <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
             Indicazioni
           </a>
-          <a class="d-link" href="https://www.culture.gov.gr/en/Information/SitePages/view.aspx?iID=2418" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"></circle><path d="M1.5 8H14.5M8 1.5C10 4 10 12 8 14.5M8 1.5C6 4 6 12 8 14.5" stroke="currentColor" stroke-width="1.2"></path></svg>
-            Sito ufficiale
-          </a>
         </div>
       </div>
       <div class="d-card">
@@ -1286,10 +981,6 @@ footer{
             <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
             Indicazioni
           </a>
-          <a class="d-link" href="https://www.culture.gov.gr/en/Information/SitePages/view.aspx?iID=2399" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"></circle><path d="M1.5 8H14.5M8 1.5C10 4 10 12 8 14.5M8 1.5C6 4 6 12 8 14.5" stroke="currentColor" stroke-width="1.2"></path></svg>
-            Sito ufficiale
-          </a>
         </div>
       </div>
       <div class="d-card">
@@ -1300,10 +991,6 @@ footer{
           <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Methoni+Castle,Greece" target="_blank" rel="noopener">
             <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
             Indicazioni
-          </a>
-          <a class="d-link" href="https://www.culture.gov.gr/en/Information/SitePages/view.aspx?iID=2390" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"></circle><path d="M1.5 8H14.5M8 1.5C10 4 10 12 8 14.5M8 1.5C6 4 6 12 8 14.5" stroke="currentColor" stroke-width="1.2"></path></svg>
-            Sito ufficiale
           </a>
         </div>
       </div>
@@ -1317,10 +1004,6 @@ footer{
           <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Ancient+Messene,Greece" target="_blank" rel="noopener">
             <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
             Indicazioni
-          </a>
-          <a class="d-link" href="https://www.ancientmessene.gr/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"></circle><path d="M1.5 8H14.5M8 1.5C10 4 10 12 8 14.5M8 1.5C6 4 6 12 8 14.5" stroke="currentColor" stroke-width="1.2"></path></svg>
-            Sito ufficiale
           </a>
         </div>
       </div>
@@ -1541,138 +1224,6 @@ footer{
       if(el){ e.preventDefault(); var y = el.getBoundingClientRect().top + window.scrollY - 56; window.scrollTo({top:y,behavior:'smooth'}); }
     });
   });
-
-  // ── MAP INTERACTION ──────────────────────────────────────────────────────
-  var mapData = {
-    'poi-voidokilia': {
-      name: 'Voidokilia',
-      dist: 'A 10 min da Petrochori',
-      desc: 'Spiaggia a forma di omega — sabbia bianca, acque basse. Si raggiunge solo a piedi. Una delle più belle della Grecia.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Voidokilia+Beach+Messinia+Greece'
-    },
-    'poi-romanos': {
-      name: 'Romanos',
-      dist: 'A 5 min da Petrochori',
-      desc: 'Villaggio vicino, con qualche bella spiaggia e strutture ricettive nella zona.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Romanos+Messinia+Greece'
-    },
-    'poi-nestor': {
-      name: 'Palazzo di Nestore',
-      dist: 'A 20 min da Petrochori',
-      desc: 'Sito miceneo del 1300 a.C. — il meglio conservato in Grecia. Chiuso il martedì.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Palace+of+Nestor+Pylos+Greece'
-    },
-    'poi-pylos': {
-      name: 'Pylos & Niokastro',
-      dist: 'A 20 min da Petrochori',
-      desc: 'Borgo affacciato sulla Baia di Navarino. Il castello veneziano è poco visitato e vale la passeggiata.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Niokastro+Pylos+Greece'
-    },
-    'poi-methoni': {
-      name: 'Methoni',
-      dist: 'A 30 min da Petrochori',
-      desc: 'Borgo medievale con fortezza veneziana sul mare. Vale una mezza giornata.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Methoni+Castle+Greece'
-    },
-    'poi-finikounda': {
-      name: 'Finikounda',
-      dist: 'A 25 min da Petrochori',
-      desc: 'Villaggio di pescatori con una lunga spiaggia sabbiosa e acque calme. Ritmo lento, taverne sul mare.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Finikounda+Greece'
-    },
-    'poi-messene': {
-      name: 'Antica Messene',
-      dist: 'A 40 min da Petrochori',
-      desc: 'Teatro, stadio, templi — uno dei siti più sorprendenti del Peloponneso, ancora poco affollato.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Ancient+Messene+Greece'
-    },
-    'poi-kalamata': {
-      name: 'Kalamata',
-      dist: 'Aeroporto · 45 min',
-      desc: 'Aeroporto internazionale KLX. Voli da Atene frequenti. Noleggio auto disponibile in loco.',
-      url: 'https://www.google.com/maps/search/?api=1&query=Kalamata+Airport+Greece'
-    }
-  };
-
-  var mapCard = document.getElementById('map-card');
-  var activeId = null;
-  var mapHideTimer;
-
-  // When mouse enters the card itself, cancel the hide timer
-  mapCard.addEventListener('mouseenter', function() {
-    clearTimeout(mapHideTimer);
-  });
-  // When mouse leaves the card, hide after short delay
-  mapCard.addEventListener('mouseleave', function() {
-    mapHideTimer = setTimeout(hideMapCard, 120);
-  });
-
-  function showMapCard(id, targetEl) {
-    var d = mapData[id];
-    if (!d) return;
-    document.getElementById('mc-name').textContent = d.name;
-    document.getElementById('mc-dist').textContent = d.dist;
-    document.getElementById('mc-desc').textContent = d.desc;
-    document.getElementById('mc-link').href = d.url;
-    // Position near the dot
-    var svgEl = targetEl.closest('svg');
-    var svgRect = svgEl.getBoundingClientRect();
-    var dotCircle = targetEl.querySelector('circle');
-    var dotRect = dotCircle.getBoundingClientRect();
-    var container = document.querySelector('.mapviz-container');
-    var containerRect = container.getBoundingClientRect();
-    var left = dotRect.left - containerRect.left + 14;
-    var top  = dotRect.top  - containerRect.top  - 10;
-    // Keep card inside container
-    var cardW = 220;
-    if (left + cardW > containerRect.width - 10) left = left - cardW - 20;
-    if (left < 4) left = 4;
-    mapCard.style.left = left + 'px';
-    mapCard.style.top  = top  + 'px';
-    mapCard.classList.add('active');
-    activeId = id;
-    // Mark dot active
-    document.querySelectorAll('.poi-dot').forEach(function(g){ g.classList.remove('active'); });
-    targetEl.classList.add('active');
-  }
-
-  function hideMapCard() {
-    mapCard.classList.remove('active');
-    document.querySelectorAll('.poi-dot').forEach(function(g){ g.classList.remove('active'); });
-    activeId = null;
-  }
-
-  var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-
-  document.querySelectorAll('.poi-dot').forEach(function(g) {
-    if (isTouchDevice) {
-      g.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (activeId === g.id) { hideMapCard(); return; }
-        showMapCard(g.id, g);
-      });
-    } else {
-      g.addEventListener('mouseenter', function() {
-        clearTimeout(mapHideTimer);
-        showMapCard(g.id, g);
-      });
-      g.addEventListener('mouseleave', function() {
-        // Short delay so mouse can travel to the card without it disappearing
-        mapHideTimer = setTimeout(hideMapCard, 220);
-      });
-    }
-    // Keyboard
-    g.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        if (activeId === g.id) { hideMapCard(); return; }
-        showMapCard(g.id, g);
-      }
-    });
-  });
-
-  // Tap outside to close on mobile
-  document.addEventListener('click', function() { if (isTouchDevice) hideMapCard(); });
 
   // ── GUESTBOOK FORM ──────────────────────────────────────────────────────
   var augForm = document.getElementById('auguri-form');
