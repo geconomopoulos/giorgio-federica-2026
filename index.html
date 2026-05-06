@@ -978,10 +978,13 @@ nav.scrolled .nav-burger span{background:var(--dark)}
       return;
     }
     function p(n){return String(Math.floor(n)).padStart(2,'0')}
-    document.getElementById('cd-d').textContent = p(t/86400000);
-    document.getElementById('cd-h').textContent = p(t%86400000/3600000);
-    document.getElementById('cd-m').textContent = p(t%3600000/60000);
-    document.getElementById('cd-s').textContent = p(t%60000/1000);
+    var d=document.getElementById('cd-d');
+    if(d){
+      d.textContent=p(t/86400000);
+      document.getElementById('cd-h').textContent=p(t%86400000/3600000);
+      document.getElementById('cd-m').textContent=p(t%3600000/60000);
+      document.getElementById('cd-s').textContent=p(t%60000/1000);
+    }
   }
   tick(); setInterval(tick, 1000);
 
