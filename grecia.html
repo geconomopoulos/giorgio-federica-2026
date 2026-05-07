@@ -755,6 +755,8 @@ nav.scrolled .nav-burger span{background:var(--dark)}
 .page-hero ~ section .reveal-delay-3{animation-delay:.3s}
 
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 <nav id="nav">
@@ -779,88 +781,27 @@ nav.scrolled .nav-burger span{background:var(--dark)}
   <p class="eyebrow">Petrochori · Messinia</p>
   <h1 class="page-hero-title">La Grecia</h1>
 </div>
-<!-- DINTORNI -->
-<section class="dintorni-wrap" id="dintorni">
-  <div class="wide">
-    <div class="reveal">
-      <p class="eyebrow">Nei dintorni</p>
-      <h2 class="sec-title">Se vi fermate qualche giorno</h2>
-      <p class="body-t" style="max-width:500px">Questi sono alcuni posti che secondo noi meritano — spiagge, storia e buon cibo.</p>
-    </div>
-
-        <div class="dintorni-grid reveal reveal-delay-2">
-      <div class="d-card">
-        <p class="d-num">01</p>
-        <p class="d-title">Voidokilia</p>
-        <p class="d-body">Considerata una delle spiagge più belle della Grecia. Ha la forma di un'omega perfetta — sabbia bianca fine, acque basse e color smeraldo, una laguna protetta alle spalle. Si raggiunge solo a piedi, circa 15 minuti dal parcheggio, il che la tiene lontana dalla folla. Vale ogni passo. A meno di 10 minuti da Petrochori.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Voidokilia+Beach,Messinia,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-      <div class="d-card">
-        <p class="d-num">02</p>
-        <p class="d-title">Pylos &amp; Niokastro</p>
-        <p class="d-body">Il borgo si affaccia sulla Baia di Navarino. Il castello veneziano è poco visitato e vale la passeggiata.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Niokastro,Pylos,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-      <div class="d-card">
-        <p class="d-num">03</p>
-        <p class="d-title">Palazzo di Nestore</p>
-        <p class="d-body">Sito miceneo del 1300 a.C., tra i meglio conservati in Grecia. A circa 20 minuti. Chiuso il martedì.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Nestor,Pylos,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-      <div class="d-card">
-        <p class="d-num">04</p>
-        <p class="d-title">Methoni</p>
-        <p class="d-body">Un piccolo borgo medievale affacciato sul Mar Ionio, dominato da una delle fortezze veneziane più imponenti del Mediterraneo. Il castello si allunga sul mare su un promontorio — si entra dal ponte, si cammina tra torri e bastioni, e ci si ritrova con il mare da tutti i lati. Il paese è tranquillo, con qualche buona taverna sul porto. Vale una mezza giornata.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Methoni+Castle,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-      <div class="d-card">
-        <p class="d-num">05</p>
-        <p class="d-title">Antica Messene</p>
-        <p class="d-body">Antica Messene è una delle visite più sorprendenti del Peloponneso: teatro, stadio, templi, mura imponenti e un’atmosfera sospesa.
-
-È un sito archeologico ancora poco affollato, dove si può camminare tra resti ben conservati senza essere&nbsp; troppo turistico. Lo stadio, in particolare, è scenografico e inatteso; il teatro e l’area sacra restituiscono l’idea di una città antica viva, complessa, quasi intatta nella sua struttura.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Ancient+Messene,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-      <div class="d-card">
-        <p class="d-num">06</p>
-        <p class="d-title">Finikounda</p>
-        <p class="d-body">Un piccolo villaggio di pescatori a circa 20 minuti da Petrochori, con una delle spiagge più belle della zona — lunga, sabbiosa, con acque calme e poco profonde. È rimasto abbastanza autentico: qualche taverna sul lungomare, barche ormeggiate, un ritmo lento. Perfetto per un pomeriggio senza programma.</p>
-        <div class="d-actions">
-          <a class="d-link maps" href="https://www.google.com/maps/search/?api=1&query=Finikounda,Greece" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"></path></svg>
-            Indicazioni
-          </a>
-        </div>
-      </div>
-    </div>
+<!-- DINTORNI (mappa interattiva) -->
+<section style="background:var(--cream);padding:80px 0 0" id="dintorni">
+  <div style="max-width:1060px;margin:0 auto;padding:0 64px 0">
+    <p class="eyebrow">Nei dintorni</p>
+    <h2 class="sec-title">Se vi fermate <em>qualche giorno</em></h2>
+    <div class="rule"></div>
+    <p class="body-t">Cliccate un punto sulla mappa o scorrete le card per scoprire i posti che vi consigliamo.</p>
   </div>
-</section>
+  <div id="map"></div>
 
+<div class="cards-section">
+  <div class="cards-header">
+    <p class="cards-title">I posti che vi consigliamo</p>
+    <p class="cards-hint">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      scorri
+    </p>
+  </div>
+  <div class="cards-scroll" id="cards-scroll"></div>
+</div>
+</section>
 
 <!-- PLAYLIST ───────────────────────────────────────────────────────────────
      TO UPDATE: replace the href in .playlist-btn with your Spotify playlist URL.
@@ -895,7 +836,7 @@ nav.scrolled .nav-burger span{background:var(--dark)}
 (function(){
   // Countdown
   function tick(){
-    var t = new Date('2026-09-05T16:15:00+03:00') - new Date();
+    var t = new Date('2026-09-05T17:00:00+03:00') - new Date();
     var cdEl=document.querySelector('.countdown');
     if(t <= 0){
       if(cdEl) cdEl.innerHTML =
@@ -1015,6 +956,175 @@ nav.scrolled .nav-burger span{background:var(--dark)}
     });
   }
 
+
+</script>
+<script>
+
+// ── COORDINATE VERIFICATE ─────────────────────────────────────────────────
+// Voidokilia: 36.9640, 21.6596 (Wikipedia)
+// Olympia:    37.6379, 21.6303 (sito archeologico)
+var POIS = [
+  {
+    id:0, wedding:true,
+    name:"Petrochori",
+    dist:"Il nostro matrimonio · 5 settembre 2026",
+    body:"Qui ci sposiamo. La cerimonia è tra gli ulivi nel tardo pomeriggio, il ricevimento alla Taverna O Grigoris sulla spiaggia.",
+    lat:37.002, lng:21.650,
+    url:"https://www.google.com/maps/search/?api=1&query=Petrochori+Messinia+Greece"
+  },
+  {
+    id:1,
+    name:"Voidokilia",
+    dist:"A 10 min · 8 km",
+    body:"Spiaggia a forma di omega — sabbia bianca, acque basse e cristalline. Si raggiunge solo a piedi. Una delle più belle della Grecia.",
+    lat:36.9640, lng:21.6596,
+    url:"https://www.google.com/maps/search/?api=1&query=Voidokilia+Beach+Messinia+Greece"
+  },
+  {
+    id:2,
+    name:"Pylos & Niokastro",
+    dist:"A 20 min · 14 km",
+    body:"Il borgo si affaccia sulla Baia di Navarino. Il castello veneziano è poco visitato e vale la passeggiata.",
+    lat:36.9133, lng:21.6966,
+    url:"https://www.google.com/maps/search/?api=1&query=Niokastro+Pylos+Greece"
+  },
+  {
+    id:3,
+    name:"Palazzo di Nestore",
+    dist:"A 20 min · 12 km",
+    body:"Sito miceneo del 1300 a.C., tra i meglio conservati in Grecia. Chiuso il martedì.",
+    lat:37.0133, lng:21.7053,
+    url:"https://www.google.com/maps/search/?api=1&query=Palace+of+Nestor+Pylos+Greece"
+  },
+  {
+    id:4,
+    name:"Methoni",
+    dist:"A 30 min · 22 km",
+    body:"Borgo medievale con fortezza veneziana sul mare. Vale una mezza giornata.",
+    lat:36.8189, lng:21.7064,
+    url:"https://www.google.com/maps/search/?api=1&query=Methoni+Castle+Greece"
+  },
+  {
+    id:5,
+    name:"Finikounda",
+    dist:"A 25 min · 18 km",
+    body:"Villaggio di pescatori con lunga spiaggia sabbiosa e acque calme. Ritmo lento, taverne sul mare.",
+    lat:36.8269, lng:21.7982,
+    url:"https://www.google.com/maps/search/?api=1&query=Finikounda+Greece"
+  },
+  {
+    id:6,
+    name:"Antica Messene",
+    dist:"A 40 min · 35 km",
+    body:"Teatro, stadio, templi — uno dei siti più sorprendenti del Peloponneso, ancora poco affollato.",
+    lat:37.1803, lng:21.9014,
+    url:"https://www.google.com/maps/search/?api=1&query=Ancient+Messene+Greece"
+  },
+  {
+    id:7,
+    name:"Kalamata",
+    dist:"Aeroporto · 45 min",
+    body:"Aeroporto internazionale KLX. Voli da Atene frequenti. Noleggio auto disponibile in loco.",
+    lat:37.0683, lng:22.0253,
+    url:"https://www.google.com/maps/search/?api=1&query=Kalamata+Airport+Greece"
+  },
+  {
+    id:8,
+    name:"Olimpia",
+    dist:"A 1h 30min · 95 km",
+    body:"Il santuario dove nacquero i Giochi Olimpici. Uno dei siti più importanti dell'antichità — il tempio di Zeus, lo stadio, il museo. Vale il viaggio.",
+    lat:37.6379, lng:21.6303,
+    url:"https://www.google.com/maps/search/?api=1&query=Ancient+Olympia+Greece"
+  },
+  {
+    id:9,
+    name:"Cascate di Polilimnio",
+    dist:"A 45 min · 35 km",
+    body:"15 laghi cristallini collegati da cascate — la più alta raggiunge i 25 metri. Un paradiso nascosto tra ulivi e platani. Percorso di 3 km, adatto a tutti. Portate le scarpe da trekking.",
+    lat:37.063, lng:21.943,
+    url:"https://www.google.com/maps/search/?api=1&query=Polilimnio+Waterfalls+Messinia+Greece"
+  },
+  {
+    id:10,
+    name:"Tempio di Apollo Epicurio",
+    dist:"A 1h 15min · 65 km",
+    body:"Patrimonio UNESCO dal 1986 — il primo sito greco nella lista. Progettato da Iktinos, lo stesso architetto del Partenone. A 1131 m di quota, immerso nelle montagne dell'Arcadia. Coperto da una tenda bianca per la conservazione.",
+    lat:37.4296, lng:21.9003,
+    url:"https://www.google.com/maps/search/?api=1&query=Temple+Apollo+Epicurius+Bassae+Greece"
+  }
+];
+
+// Mappa centrata per mostrare tutta l'area inclusa Olimpia
+var map = L.map('map',{
+  center:[37.20, 21.78],
+  zoom:9,
+  zoomControl:true,
+  scrollWheelZoom:false
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  attribution:'© OpenStreetMap',maxZoom:18
+}).addTo(map);
+
+var markers=[], activeId=null;
+
+function makeIcon(poi, active){
+  if(poi.wedding){
+    return L.divIcon({className:'',html:'<div class="pin-wedding">✦</div>',iconSize:[38,38],iconAnchor:[19,19],popupAnchor:[0,-22]});
+  }
+  return L.divIcon({className:'',html:'<div class="pin-marker'+(active?' active':'')+'">'+poi.id+'</div>',iconSize:[32,32],iconAnchor:[16,16],popupAnchor:[0,-20]});
+}
+
+function setActive(id){
+  activeId=id;
+  markers.forEach(function(m,i){ m.setIcon(makeIcon(POIS[i], i===id)); });
+  document.querySelectorAll('.poi-card').forEach(function(c){
+    c.classList.toggle('active', parseInt(c.dataset.id)===id);
+  });
+  var card=document.querySelector('.poi-card[data-id="'+id+'"]');
+  if(card) card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+// Build cards
+var scroll=document.getElementById('cards-scroll');
+POIS.forEach(function(poi){
+  var c=document.createElement('div');
+  c.className='poi-card'+(poi.wedding?' wedding':'');
+  c.dataset.id=poi.id;
+  c.innerHTML=
+    '<p class="card-num">'+(poi.wedding?'✦':'0'+poi.id)+'</p>'+
+    '<p class="card-name">'+poi.name+'</p>'+
+    '<p class="card-dist">'+poi.dist+'</p>'+
+    '<p class="card-body">'+poi.body+'</p>'+
+    '<a class="card-btn" href="'+poi.url+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+
+    '<svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5ZM8 7.5C7.2 7.5 6.5 6.8 6.5 6S7.2 4.5 8 4.5 9.5 5.2 9.5 6 8.8 7.5 8 7.5Z" fill="currentColor"/></svg>'+
+    'Indicazioni</a>';
+  c.addEventListener('click',function(){
+    setActive(poi.id);
+    map.setView([poi.lat,poi.lng],poi.id===8?12:13,{animate:true});
+  });
+  scroll.appendChild(c);
+});
+
+// Build markers
+POIS.forEach(function(poi){
+  var popup=L.popup({closeButton:false}).setContent(
+    '<div class="popup-inner">'+
+    '<p class="popup-name">'+poi.name+'</p>'+
+    '<p class="popup-dist">'+poi.dist+'</p>'+
+    '</div>'
+  );
+  var m=L.marker([poi.lat,poi.lng],{icon:makeIcon(poi,false)}).addTo(map);
+  if(!poi.wedding){
+    m.bindPopup(popup);
+    m.on('click',function(){ setActive(poi.id); });
+    m.on('mouseover',function(){ m.openPopup(); });
+    m.on('mouseout',function(){ m.closePopup(); });
+  }
+  markers.push(m);
+});
+
+if('ontouchstart' in window) map.scrollWheelZoom.disable();
 
 </script>
 </body>
